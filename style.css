@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #162235, #20354D, #223750);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #475569;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.secao-busca p,
+.secao-favoritos > p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.controles-busca {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#input-busca {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#input-busca:focus {
+    outline: none;
+    border-color: #475569;
+}
+
+#btn-buscar {
+    padding: 12px 30px;
+    background: #475569;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#btn-buscar:hover {
+    background: #6c7e97;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.aviso-vazio {
+    color: #999;
+    font-style: italic;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+}
+
+.divisor {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin: 50px 0;
+}
+
+.secao-favoritos {
+    margin-top: 40px;
+}
+
+.app-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Container das ações (editar e excluir) */
+.acoes {
+    display: flex;
+    gap: 6px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Estilo dos botões dentro de .acoes */
+.acoes button {
+    flex: 1;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Botão Editar */
+.acoes .btn-editar {
+    background: #475569;
+    color: white;
+}
+
+.acoes .btn-editar:hover {
+    background: #6c7e97;
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.4);
+}
+
+/* Botão Excluir */
+.acoes .btn-excluir {
+    background: #475569;
+    color: white;
+}
+
+.acoes .btn-excluir:hover {
+    background: #6c7e97;
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(255, 71, 87, 0.4);
+}
+
+.btn-salvar {
+    width: auto;
+    padding: 6px 12px;
+    background: #475569;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    margin: 8px;
+}
+
+.btn-salvar:hover {
+    background: #6c7e97;
+    transform: scale(1.02);
+    box-shadow: 0 3px 10px rgba(226, 217, 189, 0.4);
+}
+
+
+.galeria-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.05);
+}
+
+.galeria-grid .card-imagem {
+    background: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-grid .card-imagem img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .controles-busca {
+        flex-direction: column;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+}

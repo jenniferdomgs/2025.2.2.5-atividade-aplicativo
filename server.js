@@ -173,6 +173,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const termo = document.getElementById('input-busca').value;
             buscarFotosExternas(termo);
         });
+
+    } 
+
+    const btnInput = document.getElementById('input-busca');
+    if(btnInput) {
+        btnInput.addEventListener('change', (e) => {
+            const termo = e.target.value;
+            buscarFotosExternas(termo);
+        });
     }
 
     // carregar galeria 

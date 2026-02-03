@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos - Atividade Web Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        
+        <section class="secao-busca">
+            <h2>Explorar Imagens</h2>
+            
+            <div class="controles-busca">
+                <input type="text" id="input-busca" placeholder="Digite uma categoria (ex: praia, tech, gatos)">
+                <button id="btn-buscar">Pesquisar</button>
+            </div>
+
+            <div id="resultados-api" class="galeria-grid">
+                <p class="aviso-vazio">Resultado</p>
+            </div>
+        </section>
+
+        <hr class="divisor">
+
+        <section class="secao-favoritos">
+            <h2>Coleção Salva</h2>
+            <p>Itens Salvos</p>
+
+            <div id="minha-galeria" class="galeria-grid">
+                <p class="aviso-vazio">Sua galeria está vazia.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="app-footer">
+        <p>Desenvolvido para disciplina de Web Design - 2026</p>
+    </footer>
+
+    <script src="server.js"></script>
+
+</body>
+</html>
